@@ -12,6 +12,8 @@ export class NavbarComponent implements OnInit {
   hamburgerOpen = false;
 
   ngOnInit(): void {
+    // TODO document why this method 'ngOnInit' is empty
+  
   }
 
   toggleHamburger(): void {

@@ -20,4 +20,18 @@ describe('NavbarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should render a nav element', () => {
+    const compiledElement = fixture.nativeElement as HTMLElement;
+    expect(compiledElement.querySelector('div nav')).toBeDefined();
+  });
+
+  it('should toggle hambugger',()=>{
+    let  navButton = fixture.debugElement.nativeElement.querySelector('button');
+    expect(component.hamburgerOpen).toBeFalsy()
+    navButton.click()
+    fixture.whenStable().then(()=>{
+      fixture.detectChanges()
+      expect(component.hamburgerOpen).toBeTruthy();
+    })
+  })
 });

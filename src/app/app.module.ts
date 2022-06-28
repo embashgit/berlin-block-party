@@ -7,6 +7,7 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { EventContainerComponent } from './pages/event-container/event-container.component';
 import { EventDetailsComponent } from './pages/event-details/event-details.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,8 +18,9 @@ import { EventDetailsComponent } from './pages/event-details/event-details.compo
     EventDetailsComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    AppRoutingModule
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
