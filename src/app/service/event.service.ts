@@ -12,7 +12,7 @@ export class EventService {
 
   public getAll(params:any): Observable<IFeed> {
     const query = Object.keys(params).map(key => key + '=' + params[key]).join('&');
-    return this.http.get<IFeed>(this.cor + this.baseUrl +'?'+ 'page=18').pipe(map((res) =>res))
+    return this.http.get<IFeed>(this.cor + this.baseUrl +'?'+ query).pipe(map((res) =>res))
   }
 }
 

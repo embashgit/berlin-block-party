@@ -4,6 +4,6 @@
         <a href="{{feedObject.link}}" class="font-bold text-gray-700 md:text-2xl text-center md:text-left">{{feedObject.title}}</a>
         <pagination-controls class="mt-9 md:mt-0" previousLabel="Prev" nextLabel="Next" (pageChange)="onPageChange($event)"></pagination-controls>
     </div>
-        <app-event-card  *ngFor="let event of eventsList | paginate:{itemsPerPage: ui.pageSize, currentPage:params.page, totalItems: totalRecords  }" [EventItem]="event"></app-event-card>
+        <app-event-card  *ngFor="let event of eventsList | paginate:{itemsPerPage: ui.pageSize, currentPage:params.page  }" [EventItem]="event"></app-event-card>
 </div>
 

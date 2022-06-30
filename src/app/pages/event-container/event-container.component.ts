@@ -11,11 +11,10 @@ export class EventContainerComponent implements OnInit  {
 public eventsList: IEventFeedItems[] = []
 public feedObject : EventFeed = {}
 public params: Iparams ={page:20}
-public totalRecords = 200
   constructor(private eventService: EventService) { 
 
   }
-  public ui:ILoader = {loading:false,error:"",pageSize:10}
+  public ui:ILoader = {loading:false,error:"",pageSize:5}
 ngOnInit(): void {
  this.loadData()
 }
@@ -41,10 +40,7 @@ public fetchData(param:any):void{
 
 
 public onPageChange(page:any):void {
-  console.log(page)
-  // const offset = (page - 1) * this.ui.pageSize;
-  // this.eventsList = this.eventsList.slice(offset, offset + this.ui.pageSize);
-  this.params.page =page
+  this.params.page = page
   this.fetchData(this.params);
 }
 
