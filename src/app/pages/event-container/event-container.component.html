@@ -1,1 +1,9 @@
-<p>event-container works!</p>
+
+<div class="w-full  ">
+    <div class="flex md:flex-row flex-col md:justify-between justify-evenly my-9">
+        <a href="{{feedObject.link}}" class="font-bold text-gray-700 md:text-2xl text-center md:text-left">{{feedObject.title}}</a>
+        <pagination-controls class="mt-9 md:mt-0" previousLabel="Prev" nextLabel="Next" (pageChange)="onPageChange($event)"></pagination-controls>
+    </div>
+        <app-event-card  *ngFor="let event of eventsList | paginate:{itemsPerPage: ui.pageSize, currentPage:params.page, totalItems: totalRecords  }" [EventItem]="event"></app-event-card>
+</div>
+
