@@ -80,7 +80,6 @@ getSearch(){
       values[key] = value;
     }
   });
-  console.log(values)
   this.fetchData(values)
 }
 public onPageChange(page:any):void {
