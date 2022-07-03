@@ -1,4 +1,4 @@
-import { Component, EventEmitter, forwardRef, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, forwardRef, Input, Output } from '@angular/core';
 import {
   ControlValueAccessor,
   FormGroup,
@@ -17,7 +17,7 @@ import data  from '../../store/locations.json';
     },
   ],
 })
-export class SearchFormComponent implements OnInit, ControlValueAccessor {
+export class SearchFormComponent implements ControlValueAccessor {
 
   constructor() { }
   @Input()
@@ -51,11 +51,8 @@ export class SearchFormComponent implements OnInit, ControlValueAccessor {
   setDisabledState?(isDisabled: boolean) {
     return isDisabled ? this.form.disable() : isDisabled;
   }
-  ngOnInit(): void {
-  }
 
-
-  public submitForm(event:any) {
+  public submitForm() {
     this.submitSearch.emit();
   }
 

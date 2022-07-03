@@ -72,7 +72,7 @@ clearError():void{
   this.ui.errorMessage = ""
 }
 
-getSearch(event:any){
+getSearch(){
   const values:any = {}
   Object.keys(this.form.controls).forEach(key => {
   const {valid, value} = this.form.controls[key]
