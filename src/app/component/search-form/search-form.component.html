@@ -1,0 +1,15 @@
+<div class="mt-12 bg-gray-200 p-6 w-full rounded-lg flex-left">
+    <form [formGroup]="form" (ngSubmit)="submitForm()" class="flex lg:flex-row flex-col items-center justify-center">
+        <div class="lg:w-2/5 w-full lg:mr-3 ">
+            <label for="title" class="block mb-2 text-sm font-medium text-gray-900 ">Title</label>  
+                <input type="text" formControlName="title" id="simple-search" class="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg  focus:ring-blue-500 focus:border-blue-500 block pl-5 p-2.5  w-full " placeholder="Title" required>
+        </div> 
+            <div class="lg:w-2/5  w-full mt-3 lg:mt-0">
+            <label for="field_geo_granularity_tid" class="block mb-2 text-sm font-medium text-gray-900">Location</label>  
+                <select formControlName="field_geo_granularity_tid" class=" w-full bg-gray-50 border border-gray-300  text-gray-900  pl-5 pr-5 p-2.5 rounded-lg leading-tight placeholder-gray-400 focus:ring-blue-500 focus:bg-white focus:border-gray-500" placeholder="Location" id="state">
+                    <option *ngFor="let location of deLocations" value="{{location.value}}">{{location.name}}</option>
+                  </select>
+            </div>
+            <button type="submit" [disabled]="form.invalid" class="pointer w-32 inline-flex items-center py-2.5 px-3 ml-3 text-sm font-medium text-white bg-blue-700 text-center rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 mt-7 focus:outline-none focus:ring-blue-300 "><svg class="mr-2 -ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>Search</button>
+    </form>
+</div>
