@@ -8,7 +8,7 @@ import * as converter from 'xml-js';
 })
 export class EventService {
   constructor(private http:HttpClient){}
-  private cor :string = `https://cors-anywhere.herokuapp.com/`
+  // private cor :string = `https://cors-anywhere.herokuapp.com/`
   private baseUrl  = 'https://daten.berlin.de/datensaetze/rss.xml/berliner-stra%C3%9Fen-und-volksfeste-2020'
 
   public getAll(params:any): Observable<any> {
@@ -16,7 +16,7 @@ export class EventService {
     Object.keys(params).forEach(function (key) {
       httpParams = httpParams.append(key, params[key]);
   });
-    return this.http.get(this.cor + this.baseUrl,{ params:httpParams, responseType: 'text' }).pipe(map(this.extractFeeds))
+    return this.http.get(this.baseUrl,{ params:httpParams, responseType: 'text' }).pipe(map(this.extractFeeds))
   }
 
 
