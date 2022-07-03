@@ -48,10 +48,10 @@ public fetchData(param:any):void{
       this.feedObject = rest;
     this.ui.loading = false;
     },
-    error: (error) => {
+    error: () => {
       this.ui.error = true;
-      this.ui.errorMessage = "Unable to fetch Data";
-      console.log(error)
+      this.ui.errorMessage = "Unable to fetch Data"
+      this.ui.loading = false;
     },
     complete: () => this.ui.loading = false
     });
