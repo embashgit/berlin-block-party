@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule,HttpClientJsonpModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent,FooterComponent,EventCardComponent } from './component'
+import { NavbarComponent,FooterComponent,EventCardComponent,SearchFormComponent,NotificationComponent } from './component'
 import { EventContainerComponent,EventDetailsComponent } from './pages';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,12 +15,17 @@ import {NgxPaginationModule} from 'ngx-pagination';
     EventContainerComponent,
     EventDetailsComponent,
     EventCardComponent,
+    NotificationComponent,
+    SearchFormComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    HttpClientJsonpModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
