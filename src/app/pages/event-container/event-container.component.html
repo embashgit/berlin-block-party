@@ -1,20 +1,5 @@
 
-<div class="w-full  ">
-   <app-search-form (submitSearch)="getSearch()" [form]="form" ></app-search-form>
-    <div class="flex md:flex-row flex-col md:justify-between justify-evenly my-9">
-        <a href="{{feedObject?.link}}" class="font-bold text-gray-700 md:text-2xl text-center md:text-left">{{feedObject?.title}}</a>
-        <pagination-controls class="mt-9 md:mt-0" previousLabel="Prev" nextLabel="Next" (pageChange)="onPageChange($event)"></pagination-controls>
-    </div>
-    <div *ngIf="!ui.loading">
-        <app-event-card  *ngFor="let event of eventsList | paginate:{itemsPerPage: ui.pageSize, currentPage:params.page  }" [EventItem]="event"></app-event-card>
-    </div>
-    <div *ngIf="ui.loading">
-        <img class="m-auto h-12" src="https://i.gifer.com/ZZ5H.gif" alt="">
-    </div>
-</div>
 
 
-<div *ngIf="ui.error">
-<app-notification (clearError)="clearError()" [message]="ui.errorMessage"></app-notification>
-</div>
-<div [innerHtml]="htmlContent"></div>
+<div [innerHTML]="htmlContent | safe: 'html'"></div>
+<!-- <div #simpleDiv></div> -->
