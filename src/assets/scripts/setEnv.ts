@@ -1,6 +1,5 @@
 /* tslint:disable */
 // @ts-nocheck
-/* eslint-disable import/first */
 const { writeFile, existsSync, mkdirSync } = require('fs');
 const { argv } = require('yargs');
 
