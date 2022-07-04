@@ -6,7 +6,7 @@
         </div> 
             <div class="lg:w-2/5  w-full mt-3 lg:mt-0">
             <label for="field_geo_granularity_tid" class="block mb-2 text-sm font-medium text-gray-900">Location</label>  
-                <select formControlName="field_geo_granularity_tid" class=" appearance-none w-full bg-gray-50 border border-gray-300  text-gray-900  pl-5 pr-5 p-2.5 rounded-lg leading-tight placeholder-gray-400 focus:ring-blue-500 focus:bg-white focus:border-gray-500" placeholder="Location" id="state">
+                <select formControlName="field_geo_granularity_tid" class=" w-full bg-gray-50 border border-gray-300  text-gray-900  pl-5 pr-5 p-2.5 rounded-lg leading-tight placeholder-gray-400 focus:ring-blue-500 focus:bg-white focus:border-gray-500" placeholder="Location" id="state">
                     <option *ngFor="let location of deLocations" value="{{location.value}}">{{location.name}}</option>
                   </select>
             </div>
