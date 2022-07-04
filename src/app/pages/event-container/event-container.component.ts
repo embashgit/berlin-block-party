@@ -74,6 +74,7 @@ search(param:any):void{
   this.eventService.searchFeeds(param).subscribe({
     next: (res:any)=>{
     const {results,index} = res;
+    this.params.page =1
     this.searchResult = index;
     this.params = {...this.params, ...results};
     },

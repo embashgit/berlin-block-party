@@ -14,9 +14,11 @@
     <div *ngIf="ui.loading">
         <img class="m-auto h-12" src="https://i.gifer.com/ZZ5H.gif" alt="">
     </div>
+    <div class=" text-center m-auto" *ngIf=" !ui.loading && ((ui.isSearching && !searchResult.length) || (!ui.isSearching && !eventsList.length))">
+        <p class="text-2xl  text-grey-400  ">No Record Found!</p>
+        <button class="pointer py-2.5 px-9 text-medium border border-blue-700 rounded-lg my-6 text-grey-100 bg-blue-800 text-white" (click)="loadData()">Refresh Page</button>
+    </div>
 </div>
-
-
 <div *ngIf="ui.error">
 <app-notification (clearError)="clearError()" [message]="ui.errorMessage"></app-notification>
 </div>
