@@ -73,8 +73,23 @@ export interface ILoader{
     error: boolean;
     pageSize:number;
     errorMessage:string
+    isSearching:boolean;
 }
 
 export interface Iparams {
     page:number;
+    count:number;
+    items_per_page:number
+}
+
+export interface Isearchable{
+    anschrift:string,
+    art:string;
+    empfaengerid: string;
+    geber: string;
+    id: string;
+    jahr: string;
+    name: string;
+    politikbereich: string;
+    zweck: string
 }

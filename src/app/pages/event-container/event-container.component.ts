@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { SafeHtml } from '@angular/platform-browser';
-import { EventFeed,  EventFeedItems, ILoader, Iparams } from 'src/app/models/events.model';
+import { EventFeed,  EventFeedItems, ILoader, Iparams, Isearchable } from 'src/app/models/events.model';
 import { EventService } from 'src/app/service/event.service';
 
-type FormControlsNames = 'title' | 'field_category_tid' | 'field_geo_granularity_tid';
+type FormControlsNames = 'q' | 'anschrift';
 
 @Component({
   selector: 'app-event-container',
@@ -16,19 +16,15 @@ export class EventContainerComponent implements OnInit  {
 
 public eventsList: EventFeedItems[] = []
 public feedObject!: any 
-public params: Iparams ={page:1}
+public params: Iparams ={page:1,count:0,items_per_page:0}
 public htmlContent!:SafeHtml
 public form!: FormGroup;
-public data ={
-  field_category_tid:'',
-  title:'',
-  field_geo_granularity_tid:''
-}
+public searchResult: Isearchable[]= []
 public formControls!: { [name in FormControlsNames]: FormControl | FormGroup };
   constructor(private eventService: EventService,private fb: FormBuilder) { 
 
   }
-  public ui:ILoader = {loading:false,error:false,errorMessage:"",pageSize:10}
+  public ui:ILoader = {loading:false,error:false,errorMessage:"",pageSize:10,isSearching:false}
 ngOnInit(): void {
  this.loadData()
  this.buildForm()
@@ -41,6 +37,7 @@ public loadData(): void{
 
 public fetchData(param:any):void{
   this.ui.loading = true;
+  this.ui.isSearching = false;
   this.eventService.getAll(param).subscribe({
     next: (res:EventFeed)=>{
      const {feed,...rest } = res;
@@ -60,9 +57,8 @@ public fetchData(param:any):void{
 
 private buildForm(): void {
   this.formControls = {
-    title: this.fb.control(''),
-    field_category_tid: this.fb.control(''),
-    field_geo_granularity_tid: this.fb.control('')
+    q: this.fb.control(''),
+    anschrift: this.fb.control('')
   }
   this.form = new FormGroup(this.formControls);
 }
@@ -70,6 +66,24 @@ private buildForm(): void {
 clearError():void{
   this.ui.error = !this.ui.error;
   this.ui.errorMessage = ""
+}
+
+search(param:any):void{
+  this.ui.loading = true;
+  this.ui.isSearching = true;
+  this.eventService.searchFeeds(param).subscribe({
+    next: (res:any)=>{
+    const {results,index} = res;
+    this.searchResult = index;
+    this.params = {...this.params, ...results};
+    },
+    error: () => {
+      this.ui.error = true;
+      this.ui.errorMessage = "Record not found"
+      this.ui.loading = false;
+    },
+    complete: () => this.ui.loading = false
+    });
 }
 
 getSearch(){
@@ -80,7 +94,7 @@ getSearch(){
       values[key] = value;
     }
   });
-  this.fetchData(values)
+  this.search(values)
 }
 public onPageChange(page:any):void {
   this.params.page = page
