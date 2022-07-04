@@ -7,6 +7,7 @@ import { NavbarComponent,FooterComponent,EventCardComponent,SearchFormComponent,
 import { EventContainerComponent,EventDetailsComponent } from './pages';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SafePipe } from './safe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     EventCardComponent,
     NotificationComponent,
     SearchFormComponent,
+    SafePipe,
   ],
   imports: [
     AppRoutingModule,
