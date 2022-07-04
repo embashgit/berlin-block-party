@@ -3,14 +3,16 @@ import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { EventFeed, Isearchable } from '../models/events.model';
 import * as converter from 'xml-js';
+import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class EventService {
   constructor(private http:HttpClient){}
-  private cor :string = `https://cors-anywhere.herokuapp.com/`
-  private baseUrl  = 'https://daten.berlin.de/datensaetze/rss.xml/berliner-stra%C3%9Fen-und-volksfeste-2020'
-  private searchUrl = 'https://www.berlin.de/sen/finanzen/service/zuwendungsdatenbank/index.php/index/index.json'
+  private cor :string = environment.CORSURL
+  private baseUrl  = environment.BASEURL
+  private searchUrl = environment.SEARCHURL
   public getAll(params:any): Observable<any> {
     let httpParams = new HttpParams();
     Object.keys(params).forEach(function (key) {
