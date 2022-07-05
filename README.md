@@ -56,6 +56,10 @@ CORSURL=writecorsbypasser.com/
 ## Screenshot(s) 
 <img width="1728" alt="Screenshot 2022-07-05 at 02 18 04" src="https://user-images.githubusercontent.com/29065413/177227689-73a875e5-272a-4a49-8831-25f9748d56b1.png">
 
+## Mobile View
+<img width="1188" alt="Screenshot 2022-07-05 at 04 26 26" src="https://user-images.githubusercontent.com/29065413/177238124-1ae24ccc-f177-428b-89e0-7aedab894e46.png">
+
+
 ## Repo Structure 
  ```
 /
