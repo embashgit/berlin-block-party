@@ -3,9 +3,9 @@ Berlin Event Feed Web Application
 Visit https://berlin-block.herokuapp.com/ to view the Application
 ## Summary 
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites) 
-  - [Dependencies](#dependencies)
-  - [Setup](#setup)
+- [Prerequisites](#prerequisites) 
+- [Dependencies](#dependencies)
+- [Setup](#setup)
 - [Screenshots](#screenshots) 
 - [Repo Structure](#repo-structure) 
 - [Running the tests](#running-the-tests) 
@@ -32,7 +32,7 @@ Example: eBillsPay depends on NIP, Authserve as a dependency for most APIs
 This section should describe the step-by-step guide on how the application is setup on a local machine/development environment.  
 
 ## Screenshot(s) 
-- Landing page gif or jpeg 
+<img width="1728" alt="Screenshot 2022-07-05 at 02 15 23" src="https://user-images.githubusercontent.com/29065413/177227525-c6077068-15af-427e-b06a-41037ca06002.png">
 
 ## Repo Structure 
  ```
