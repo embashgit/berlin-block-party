@@ -18,18 +18,34 @@ Visit https://berlin-block.herokuapp.com/ to view the Application
 - [Additional information](#additional-information)  
   
 ## Getting Started
-These instructions highlighted in this section will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment section for notes on how to deploy the project on a live system
+Follow this guide to set up Berlin Blockv project locally, To successfully run the App, a CORS by-passer is needed to allow app to fetch data, with this I hav created a proxy server `https://github.com/embashgit/cors-any` and deploy on heroku to allow the app fetch Data without being stopped by CORS, to use this CORS parser, create a file on the root directory name is `.env` and set 
+```
+CORSURL=https://bash-cors-any.herokuapp.com/
+``` 
 
 ### Prerequisites 
-The prerequisites are list of software or frameworks that would be required to setup the application. Also, the steps to install them should be documented too. 
-Example: jdk, .net framework, nodeJs, intellij etc.
+- [node v16](https://nodejs.org).
+- [Angular v14](https://angular.io/).
+- [Dotenv](https://www.npmjs.com/package/dotenv).
 
 ### Dependencies 
-Dependencies are list of external applications/platforms that the software development largely depends on for it to function.  
-Example: eBillsPay depends on NIP, Authserve as a dependency for most APIs 
+- [Tailwind css](https://tailwindcss.com/).
+- [TypeScript](https://www.typescriptlang.org/)
 
 ### Setup 
-This section should describe the step-by-step guide on how the application is setup on a local machine/development environment.  
+- clone the repo using `git clone https://github.com/embashgit/berlin-block-party`
+- install the dependencies using `npm install`
+- Set Environment Varables inside .env file as specified in .env.examples: the variables are: 
+
+```
+BASEURL=writetheurlhere.com
+SEARCHURL=writesearchurlhere.com
+CORSURL=writecorsbypasser.com/
+
+```
+​- run `npm run lint` to lint code
+- start the development server using `npm run dev`
+- visit `http://localhost:4200` on your browser and you will be presented with the Main page
 
 ## Screenshot(s) 
 <img width="1728" alt="Screenshot 2022-07-05 at 02 18 04" src="https://user-images.githubusercontent.com/29065413/177227689-73a875e5-272a-4a49-8831-25f9748d56b1.png">
@@ -141,15 +157,16 @@ N/A
 
 ## Versioning 
 
-| Version No    | Description of change | Date       |
-| ------------- |:---------------------:| ----------:|
-| 1.0           | First Deployment      | 29/06/2022 |
-| 1.1           | Added Search          | 19/02/2022 |
-| 1.2           | Bug fix               | 19/02/2022 |
-| 1.3           | Added new Cors Proxy  | 19/02/2022 |
-| 1.4           | Added Loader          | 19/02/2022 |
-| 1.5           | Integrate CI/CD       | 19/02/2022 |
-| 1.6           | Dynamic Variable      | 19/02/2022 |
+| Version No     | Description of change                                                 | Date                |
+|:--------------:|:---------------------------------------------------------------------:|:-------------------:|
+| v1.0           | First Deployment                                                      | 03/07/2022 1:40  PM |
+| v1.1           | Added Search                                                          | 03/07/2022 2:11  PM |
+| v1.2           | Bug fix (Rollback)                                                    | 03/07/2022 3:00  PM |
+| v1.3           | Added Git actions fix                                                 | 04/07/2022 1:00  PM |
+| v1.4           | Added new Cors Proxy                                                  | 04/07/2022 3:00  PM |
+| v1.5           | Added Loader                                                          | 04/07/2022 5:00  PM |
+| v1.6           | Integrate CI/CD                                                       | 04/07/2022 5:54  PM |
+| v1.7           | Dynamic Variable injection in the server                              | 05/07/2022 10:40 PM |
 
 
 ## Authors 
@@ -163,7 +180,8 @@ N/A
  
  
 ## Additional Information 
-This section should capture additional information that is useful and it is related to the project. 
+
+To 
   
 
  
