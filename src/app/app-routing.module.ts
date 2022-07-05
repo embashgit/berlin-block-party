@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EventContainerComponent, EventDetailsComponent } from './pages';
+import { EventContainerComponent} from './pages';
 
 
 const routes: Routes = [
@@ -9,8 +9,8 @@ const routes: Routes = [
     component: EventContainerComponent
   },
   {
-    path: 'event:id',
-    component: EventDetailsComponent
+    path: '**',
+    component: EventContainerComponent
   },
 
 ];

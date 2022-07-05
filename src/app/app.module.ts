@@ -4,7 +4,7 @@ import { HttpClientModule,HttpClientJsonpModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent,FooterComponent,EventCardComponent,SearchFormComponent,NotificationComponent } from './component'
-import { EventContainerComponent,EventDetailsComponent } from './pages';
+import { EventContainerComponent} from './pages';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearhResultComponent } from './component/searh-result/searh-result.component';
@@ -14,7 +14,6 @@ import { SearhResultComponent } from './component/searh-result/searh-result.comp
     NavbarComponent,
     FooterComponent,
     EventContainerComponent,
-    EventDetailsComponent,
     EventCardComponent,
     NotificationComponent,
     SearchFormComponent,
