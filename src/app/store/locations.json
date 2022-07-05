@@ -1,10 +1,6 @@
 {
     "locations":[
         {
-            "name":"All",
-            "value":"All"
-        },
-        {
             "name":"Berlin",
             "value":198
         },

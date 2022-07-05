@@ -1,4 +1,4 @@
-# Project Title
+# Berlin Block
 Berlin Event Feed Web Application. with a search functionality using the search api from `www.berlin.de/sen/finanzen/service/zuwendungsdatenbank/index.php`
 Visit [Berlin Blocker](https://berlin-block.herokuapp.com/) to view the deployed Application
 ## Summary 
