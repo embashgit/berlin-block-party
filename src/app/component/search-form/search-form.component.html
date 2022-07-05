@@ -1,12 +1,12 @@
 <div class="mt-12 bg-gray-100 p-6 w-full rounded-lg">
-    <form [formGroup]="form" (ngSubmit)="submitForm()" class="flex lg:flex-row flex-col items-center justify-center">
+    <form [formGroup]="form" id="form" (ngSubmit)="submitForm()" class="flex lg:flex-row flex-col items-center justify-center">
         <div class="lg:w-2/5 w-full lg:mr-3 ">
             <label for="title" class="block mb-2 text-sm font-medium text-gray-900 ">Search Key</label>  
                 <input type="text" formControlName="q" id="simple-search" class="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg  focus:ring-blue-500 focus:border-blue-500 block pl-5 p-2.5  w-full " placeholder="Title">
         </div> 
             <div class="lg:w-2/5  w-full mt-3 lg:mt-0">
             <label for="anschrift" class="block mb-2 text-sm font-medium text-gray-900">Location</label>  
-                <select formControlName="anschrift" class=" appearance-none w-full bg-gray-50 border border-gray-300  text-gray-900  pl-5 pr-5 p-2.5 rounded-lg leading-tight placeholder-gray-400 focus:ring-blue-500 focus:bg-white focus:border-gray-500" placeholder="Location" id="state">
+                <select formControlName="anschrift" class=" select-location appearance-none w-full bg-gray-50 border border-gray-300  text-gray-900  pl-5 pr-5 p-2.5 rounded-lg leading-tight placeholder-gray-400 focus:ring-blue-500 focus:bg-white focus:border-gray-500" placeholder="Location" id="state">
                     <option *ngFor="let location of deLocations" value="{{location.name}}">{{location.name}}</option>
                   </select>
             </div>

@@ -14,10 +14,21 @@ describe('SearhResultComponent', () => {
 
     fixture = TestBed.createComponent(SearhResultComponent);
     component = fixture.componentInstance;
+    component.data = {
+    anschrift:"",
+    art:"string",
+    empfaengerid: "string",
+    geber: "string",
+    id: "string;",
+    jahr: "",
+    name: "string;",
+    politikbereich:" string;",
+    zweck:" string"
+    }
     fixture.detectChanges();
   });
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });
