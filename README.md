@@ -32,7 +32,7 @@ Example: eBillsPay depends on NIP, Authserve as a dependency for most APIs
 This section should describe the step-by-step guide on how the application is setup on a local machine/development environment.  
 
 ## Screenshot(s) 
-<img width="1728" alt="Screenshot 2022-07-05 at 02 15 23" src="https://user-images.githubusercontent.com/29065413/177227525-c6077068-15af-427e-b06a-41037ca06002.png">
+<img width="1728" alt="Screenshot 2022-07-05 at 02 18 04" src="https://user-images.githubusercontent.com/29065413/177227689-73a875e5-272a-4a49-8831-25f9748d56b1.png">
 
 ## Repo Structure 
  ```
