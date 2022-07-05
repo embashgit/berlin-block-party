@@ -14,9 +14,7 @@
       <a href="{{EventItem.link}}" class="text-blue-600 lg:text-xl text-xs  hover:underline">Read more ⟶</a> 
       <div class="flex items-center">
           <a class="font-bold text-gray-700  lg:text-xl text-xs cursor-pointer ">{{EventItem.author}}</a>
-        <img *ngIf="EventItem.thumbnail" src="{{EventItem.thumbnail}}" alt="Author Photo" class="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block"> 
             <img *ngIf="!EventItem.thumbnail" src="https://stackdiary.com/140x100.png" alt="Author Photo" class="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block"> 
-       
       </div>
     </div>
   </div>
