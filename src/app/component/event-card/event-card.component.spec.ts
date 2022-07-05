@@ -14,10 +14,19 @@ describe('EventCardComponent', () => {
 
     fixture = TestBed.createComponent(EventCardComponent);
     component = fixture.componentInstance;
+  component.EventItem  = {
+    description:"",
+    guid:"",
+    author:"",
+    title:"",
+    link:"",
+    pubDate:""
+  }
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });
