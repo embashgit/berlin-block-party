@@ -8,12 +8,12 @@
     </div> 
     <div class="mt-2">
       <a class="lg:text-2xl text-medium font-bold text-gray-700  hover:text-gray-600 hover:underline">{{EventItem.title}}</a> 
-      <p class="mt-2 text-gray-600 sm:text-sm ">{{EventItem.description}}</p>
+      <p class="mt-2 text-gray-600 text-xs lg:text-xl ">{{EventItem.description}}</p>
     </div> 
     <div class="flex items-center justify-between mt-4">
-      <a href="{{EventItem.link}}" class="text-blue-600 lg:text-medium text-sm  hover:underline">Read more ⟶</a> 
+      <a href="{{EventItem.link}}" class="text-blue-600 lg:text-xl text-xs  hover:underline">Read more ⟶</a> 
       <div class="flex items-center">
-          <a class="font-bold text-gray-700  sm:text-sm cursor-pointer ">{{EventItem.author}}</a>
+          <a class="font-bold text-gray-700  lg:text-xl text-xs cursor-pointer ">{{EventItem.author}}</a>
         <img *ngIf="EventItem.thumbnail" src="{{EventItem.thumbnail}}" alt="Author Photo" class="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block"> 
             <img *ngIf="!EventItem.thumbnail" src="https://stackdiary.com/140x100.png" alt="Author Photo" class="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block"> 
        
