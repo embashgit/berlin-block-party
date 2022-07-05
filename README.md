@@ -1,6 +1,6 @@
 # Project Title
-Berlin Event Feed Web Application
-Visit https://berlin-block.herokuapp.com/ to view the Application
+Berlin Event Feed Web Application. with a search functionality using the search api from `www.berlin.de/sen/finanzen/service/zuwendungsdatenbank/index.php`
+Visit [Berlin Blocker](https://berlin-block.herokuapp.com/) to view the deployed Application
 ## Summary 
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites) 
@@ -18,7 +18,11 @@ Visit https://berlin-block.herokuapp.com/ to view the Application
 - [Additional information](#additional-information)  
   
 ## Getting Started
-Follow this guide to set up Berlin Blockv project locally, To successfully run the App, a CORS by-passer is needed to allow app to fetch data, with this I hav created a proxy server `https://github.com/embashgit/cors-any` and deploy on heroku to allow the app fetch Data without being stopped by CORS, to use this CORS parser, create a file on the root directory name is `.env` and set 
+Follow this guide to set up Berlin Block project locally, To successfully run the App, a CORS by-passer is needed to allow app to fetch data, with this I have created a proxy server 
+```
+https://github.com/embashgit/cors-any
+```
+ I deployed on heroku the same server i (deployed the working application on), to allow the app fetch Data without being stopped by CORS, to use this CORS parser, create a file on the root directory name is `.env` and set 
 ```
 CORSURL=https://bash-cors-any.herokuapp.com/
 ``` 
@@ -33,17 +37,19 @@ CORSURL=https://bash-cors-any.herokuapp.com/
 - [TypeScript](https://www.typescriptlang.org/)
 
 ### Setup 
-- clone the repo using `git clone https://github.com/embashgit/berlin-block-party`
+- clone the repo using 
+```
+git clone https://github.com/embashgit/berlin-block-party
+```
 - install the dependencies using `npm install`
-- Set Environment Varables inside .env file as specified in .env.examples: the variables are: 
+- Set Environment Varables inside `.env` file as specified in `.env.examples` the variables are: 
 
 ```
 BASEURL=writetheurlhere.com
 SEARCHURL=writesearchurlhere.com
 CORSURL=writecorsbypasser.com/
-
 ```
-​- run `npm run lint` to lint code
+​- run `npm run lint` to lint code for better developer experience
 - start the development server using `npm run dev`
 - visit `http://localhost:4200` on your browser and you will be presented with the Main page
 
@@ -146,10 +152,13 @@ CORSURL=writecorsbypasser.com/
 ```
 
 ## Running the tests
-This section should explain how to run the automated tests for this application. There should be a breakdown of each of the tests and what it’s aimed to achieve. 
+Use `npm run test` to run the unit test, 
 
-## Deployment 
-This section should describe how to deploy this on a live system. The details of Jenkins configuration for the repo should be stated. 
+## Deployment
+
+-   Github Action was used for Continuos Integration (CI)
+-   Heroku pipeline was created and Linked to the Staging branch for Continous Deployment (CD)
+-   All Rules are Passed before Automatic Deployment is triggered by Github action
 
 ## Contributing 
 N/A
@@ -177,11 +186,11 @@ N/A
   
 ## Acknowledgments 
 - Dunja Bitar. 
+- [Berlin Open Data](https://daten.berlin.de/datensaetze/rss.xml/berliner-stra%C3%9Fen-und-volksfeste-2020)
  
  
 ## Additional Information 
 
-To 
-  
+ <!-- ### Important Note: Please Reachout to the Author for Live API -->
 
  
