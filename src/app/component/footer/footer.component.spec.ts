@@ -20,4 +20,8 @@ describe('FooterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should contain two divs', () => {
+    const compiledElement = fixture.nativeElement as HTMLElement;
+    expect(compiledElement.querySelector('div div')).toBeDefined();
+  });
 });
